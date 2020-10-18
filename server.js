@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.send("<h1>Hello from my app</h1>");
+    res.render('index');
 })
 
 app.listen(3000);
