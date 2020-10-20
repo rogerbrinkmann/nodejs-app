@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title><%- title %></title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/nav.ejs') %>
+    </header>
+    <div class="container-fluid mt-3">
+        <main>
+            <%- body %>
+        </main>
+        <footer>
+            <%- include('../partials/copyright.ejs') %>
+        </footer>
+        <%- include('../partials/scripts.ejs') %>
+    </div>
+</body>
+
+</html>
