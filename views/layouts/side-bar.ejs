@@ -2,40 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title><%- title %></title>
+    <%- include('../partials/head.ejs') %>
 </head>
 
 <body>
-    <header>
-        <%- include('../partials/nav.ejs') %>
-    </header>
+    <%- include('../partials/nav.ejs') %>
     <div class="container-fluid mt-3">
-        
-        <main>
-            <div class="row">
-                <div class="col-3">
-                    
-                      <ul class="list-group">
-                        <li class="list-group-item">1</li>
-                        <li class="list-group-item">2</li>
-                        <li class="list-group-item">3</li>
-                        <li class="list-group-item">4</li>
-                        <li class="list-group-item">5</li>
-                      </ul>
-                </div>
-                <div class="col">
-                    <%- body %>
-                </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <%- include('../partials/side.ejs') %>
             </div>
-        </main>
-        <footer>
-            <%- include('../partials/copyright.ejs') %>
-        </footer>
-        <%- include('../partials/scripts.ejs') %>
+            <div class="col">
+                <%- body %>
+            </div>
+        </div>
     </div>
+    <div class="container-fluid mt-5">
+        <%- include('../partials/copyright.ejs') %>
+    </div>
+    <%- include('../partials/scripts.ejs') %>
 </body>
 
 </html>

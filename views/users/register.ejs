@@ -1,0 +1,13 @@
+<h3 class="text-center"><i class="fas fa-user-plus mr-3"></i>Register</h3>
+<form action="/users/register" method="POST">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" value="<%= typeof name != 'undefined' ? name : '' %>">
+        <small id="usernameHelp" class="form-text text-muted">Username has to be unique</small>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" value="<%= typeof password != 'undefined' ? password : '' %>">
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
