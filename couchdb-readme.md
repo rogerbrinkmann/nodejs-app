@@ -36,6 +36,10 @@ admin = password
 
 CouchDB will use this file to recreate the admin account at every restart. To stop this from happening simply comment out or delete the password entry.
 
+On Windows, the config files are located in:
+
+```C:\Program Files\Apache CouchDB\etc```
+
 ## set port and bind:
 port = 5984  
 bind = 0.0.0.0 (exposes externally)  
@@ -58,6 +62,8 @@ remember to open port through ufw
 ## CouchDb on Windows
 
 ## starting and stopping couchdb server
+As administrator:
+
 C:\>net.exe start "apache couchdb"  
 C:\>net.exe stop "apache couchdb"  
 

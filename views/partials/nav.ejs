@@ -7,36 +7,23 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <% if (typeof(title) != "undefined" && title=="Home") { %>
-            <li class="nav-item active">
-                <% } else { %>
             <li class="nav-item">
-                <% } %>
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="home" href="/">Home</a>
             </li>
-
-            <% if (typeof(title) != "undefined" && title=="About") { %>
-            <li class="nav-item active">
-                <% } else { %>
             <li class="nav-item">
-                <% } %>
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" id="about" href="/about">About</a>
             </li>
-            
-            <% if (typeof(title) != "undefined" && title=="Register") { %>
-            <li class="nav-item active">
-                <% } else { %>
             <li class="nav-item">
-                <% } %>
-                <a class="nav-link" href="/users/register">Register</a>
+                <a class="nav-link" id="register" href="/users/register">Register</a>
             </li>
-
-            <% if (typeof(title) != "undefined" && title=="Login") { %>
-            <li class="nav-item active">
-                <% } else { %>
             <li class="nav-item">
-                <% } %>
-                <a class="nav-link" href="/users/login">Login</a>
+                <a class="nav-link" id="login" href="/users/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="logout" href="/users/logout">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="users" href="/users/list">Users</a>
             </li>
         </ul>
     </div>
