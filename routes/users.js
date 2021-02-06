@@ -45,6 +45,10 @@ router
     .route('/login')
     .get((req, res) => {
         const locals = { title: 'Login', layout: 'layouts/narrow', active: 'login' }
+        if (typeof (req.user) != 'undefined') {
+            locals.username = req.user.username
+            locals.isAuthenticated = req.isAuthenticated()
+        }
         res.render('users/login', locals)
     })
 
@@ -70,6 +74,10 @@ router
     .route('/register')
     .get((req, res) => {
         const locals = { title: 'Register', layout: 'layouts/narrow', active: 'register' }
+        if (typeof (req.user) != 'undefined') {
+            locals.username = req.user.username
+            locals.isAuthenticated = req.isAuthenticated()
+        }
         res.render('users/register', locals)
     })
 
@@ -142,7 +150,13 @@ router
 router
     .route('/list')
     .get(ensureAuthenticated, (req, res) => {
-        const locals = { title: 'Users', layout: 'layouts/side-nav', active: 'users', user: req.user }
+        const locals = {
+            title: 'Users',
+            layout: 'layouts/side-nav',
+            active: 'users',
+            username: req.user.username,
+            isAuthenticated: req.isAuthenticated()
+        }
         users.view('users', 'usernames', { 'include_docs': false })
             .then((data) => {
                 locals.data = data
