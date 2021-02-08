@@ -1,6 +1,8 @@
-<h1 class="display-4"><%- locals.username %></h1>
+<h1 class="display-4">
+    <%- locals.username %>
+</h1>
 <ul>
-    <% data.rows.forEach(function(user){ %>
+    <% data.rows.forEach((user)=> { %>
         <li>
             <%- user.key %>
         </li>

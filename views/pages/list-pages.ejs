@@ -1,0 +1,9 @@
+<ul class="list-group">
+    <% locals.pages.forEach((page)=> { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="/pages/page?id=<%- page.key %>">
+                <%- page.value %>
+            </a>
+        </li>
+        <% }) %>
+</ul>

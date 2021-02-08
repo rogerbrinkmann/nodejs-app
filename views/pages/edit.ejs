@@ -1,0 +1,31 @@
+<form id="editForm" action="/pages/save" method="POST">
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" id="btnClear" class="btn btn-primary">Clear</button>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+
+            <div class="form-group">
+                <input type="text" id="inputPagetitle" name="pagetitle" class="form-control"
+                    placeholder="Enter Page Title" value="<%= typeof pagetitle != 'undefined' ? pagetitle : '' %>" />
+            </div>
+        </div>
+        <div class="col-lg">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+            <textarea id="inputTextarea" name="markdownData" class="form-control"></textarea>
+            <textarea id="outputTextarea" name="htmlData" hidden class="form-control"></textarea>
+        </div>
+        <div id="htmlOutput" class="col-lg">
+        </div>
+    </div>
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+<script src="/js/edit.js"></script>

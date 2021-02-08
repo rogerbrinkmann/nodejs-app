@@ -36,6 +36,7 @@ router.use((req, res, next) => {
     next()
 })
 
+// setup couchdb connection to users - database
 const db = require('../config/keys')
 const nano = require('nano')(db.CouchURI)
 const users = nano.use('users')

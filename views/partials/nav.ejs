@@ -28,12 +28,22 @@
                     <a class="nav-link" id="logout" href="/users/logout">Logout</a>
                 </li>
             <% } %>
+            <% if(locals.isAuthenticated) { %>
+                <li class="nav-item">
+                    <a class="nav-link" id="edit" href="/pages/edit">Edit Page</a>
+                </li>
+            <% } %>
+            <% if(locals.isAuthenticated) { %>
+                <li class="nav-item">
+                    <a class="nav-link" id="list-pages" href="/pages/list">Pages</a>
+                </li>
+            <% } %>
         </ul>
-    </div>
-    <div>
-        <% if(typeof locals.username !='undefined' ) { %>
-            <%- locals.username %>
-        <% } %>
-        
+        <div>
+            <% if(typeof locals.username !='undefined' ) { %>
+                <%- locals.username %>
+            <% } %>
+            
+        </div>
     </div>
 </nav>
